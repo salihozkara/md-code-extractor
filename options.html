@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MD Code Extractor - Settings</title>
+  <style>
+    body {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .header h1 {
+      margin: 0;
+      color: #333;
+    }
+
+    .extension-list {
+      margin-bottom: 30px;
+    }
+
+    .extension-group {
+      margin-bottom: 30px;
+      padding: 15px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+    }
+
+    .group-header {
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      color: #1976d2;
+      font-weight: bold;
+    }
+
+    .extension-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      padding: 8px;
+      background: #f8f9fa;
+      border-radius: 4px;
+    }
+
+    .extension-item input {
+      padding: 6px 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .ext-input {
+      width: 80px;
+    }
+
+    .pattern-input {
+      flex: 1;
+      font-family: monospace;
+    }
+
+    .pattern-help {
+      font-size: 12px;
+      color: #666;
+      margin-top: 5px;
+    }
+
+    .pattern-example {
+      background: #f5f5f5;
+      padding: 8px;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-family: monospace;
+      font-size: 13px;
+    }
+
+    .extension-item input:focus {
+      outline: none;
+      border-color: #1976d2;
+    }
+
+    .extension-item .arrow {
+      color: #666;
+      margin: 0 8px;
+    }
+
+    .extension-item button {
+      padding: 4px 8px;
+      margin-left: 8px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    .extension-item button:hover {
+      opacity: 1;
+    }
+
+    .extension-item:hover {
+      background: #f0f0f0;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn-primary {
+      background: #1976d2;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: #f0f0f0;
+      color: #333;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .status {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 4px;
+      display: none;
+    }
+
+    .status.success {
+      background: #e8f5e9;
+      color: #2e7d32;
+      display: block;
+    }
+
+    .status.error {
+      background: #fdecea;
+      color: #c62828;
+      display: block;
+    }
+
+    .search-box {
+      margin-bottom: 20px;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .search-box:focus {
+      outline: none;
+      border-color: #1976d2;
+    }
+
+    .no-results {
+      text-align: center;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      color: #666;
+      font-style: italic;
+      margin: 20px 0;
+    }
+
+    .group-header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .btn-small {
+      padding: 4px 8px;
+      font-size: 12px;
+      background: #e3f2fd;
+      color: #1976d2;
+      border: 1px solid #1976d2;
+    }
+
+    .btn-small:hover {
+      background: #1976d2;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Language Extensions Settings</h1>
+    <div class="actions">
+      <button id="resetDefaults" class="btn btn-secondary">Reset to Defaults</button>
+      <button id="saveSettings" class="btn btn-primary">Save Changes</button>
+    </div>
+  </div>
+
+  <input type="text" class="search-box" id="searchBox" placeholder="Search language or extension...">
+
+  <div class="extension-list" id="extensionList">
+    <!-- Extension groups will be listed here -->
+  </div>
+
+  <div id="status" class="status"></div>
+
+  <script src="options.js"></script>
+</body>
+</html> 
