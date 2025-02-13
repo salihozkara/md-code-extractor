@@ -7,11 +7,10 @@
     "clipboardRead",
     "downloads",
     "storage",
-    "notifications"
+    "notifications",
+    "activeTab"
   ],
-  "host_permissions": [
-    "<all_urls>"
-  ],
+  "host_permissions": [],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
