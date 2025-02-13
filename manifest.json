@@ -6,9 +6,7 @@
   "permissions": [
     "clipboardRead",
     "downloads",
-    "storage",
-    "notifications",
-    "activeTab"
+    "storage"
   ],
   "host_permissions": [],
   "action": {
