@@ -6,8 +6,6 @@
   "permissions": [
     "clipboardRead",
     "downloads",
-    "tabs",
-    "scripting",
     "storage",
     "notifications"
   ],
